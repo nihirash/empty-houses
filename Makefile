@@ -6,7 +6,7 @@ src/sprites.h: resources/sprites.gif
 sprites: src/sprites.h
 
 src/first.h: resources/world.map
-	tools/map.py resources/world.map 0 1 first
+	tools/map.py resources/world.map 0 0 first
 
 maps: src/first.h
 

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# (c) 2018 Alexander Sharikhin
+# Small utility for converting Tic80 maps to mine map format
 import sys
 
 def getOffset(x, y):
