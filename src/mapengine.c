@@ -6,7 +6,7 @@ static void put_tile(int x, int y, uchar *tileset, int number) {
     uchar* addr = zx_cyx2saddr(y,x);
     for (int i=0; i<8; i++) {
         *addr = *(tileset++);
-        addr+=256;
+        addr += 256;
     }
 }
 

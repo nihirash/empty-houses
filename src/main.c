@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "data.h"
 #include <spectrum.h>
 #include "mapengine.c"
+#include "data.h"
 
 static void pause(char frames) {
     for (; frames>0; frames--) {
@@ -35,7 +35,7 @@ static char map[] = {
 };
 
 static void move_player(x, y) {
-    put_tile(1 + p.x, p.y, mapTiles, tile(map, p.x, p.y));
+    put_tile(1 + p.x, p.y, sprites, tile(map, p.x, p.y));
     p.x += x;
     p.y += y;
     put_tile(1 + p.x, p.y, hero, p.state);
@@ -64,7 +64,7 @@ void main() {
     p.x = 3;
     p.y = 3;
     p.state = 0;
-    draw_map(map, mapTiles);
+    draw_map(map, sprites);
     move_player(0, 0);
     for (;;) {
         gamekeys();
