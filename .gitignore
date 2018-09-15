@@ -1,3 +1,4 @@
 *.bin
 *.tap
 *.def
+sprites.h

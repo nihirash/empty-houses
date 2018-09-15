@@ -1,7 +1,7 @@
 #include <graphics.h>
 #include <games.h>
 
-static void put_tile(int x, int y, uchar *tileset, int number) {
+static void put_tile(int x, int y, uchar *tileset, uchar number) {
     tileset += number * 8;
     uchar* addr = zx_cyx2saddr(y,x);
     for (int i=0; i<8; i++) {
@@ -39,7 +39,7 @@ static void draw_map(uchar *map, uchar *tileset) {
     di
 #endasm
     hide_map();
-    for (int r=0; r<20; r++)
+    for (int r=0; r<17; r++)
         for(int c=0; c<30; c++)
             put_tile(1 + c, r, tileset, *(map++));
     show_map();
